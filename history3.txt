@@ -1,0 +1,45 @@
+az aks install-cli
+kubectl
+az logout
+az aks get-credentials -g rg04jo -n aks04jo
+az login
+az aks get-credentials -g rg04jo -n aks04jo
+kubectl nodes 
+kubectl get nodes 
+kubectl get --help
+kubectl api-resources
+kubectl addons list
+kubectl get pods
+kubectl --all-namespaces
+kubectl get pods --all-namespaces
+kubectl get svc --all-namespaces
+kubectl get pods --all-namespaces
+kubectl get pod kube-proxy-b2l8x -n kube-system --export -o yaml pod.yaml
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml
+az aks browse --resource-group rg04jo --name aks04jo
+Y
+az aks browse --resource-group rg04jo --name aks04jo
+doskey /HISTORY > history2.txt
+kubectl version 
+kubectl get nodes
+kubectl run my-nginx --restart=Never --image=nginx:1.7.9
+kubectl get po
+kubectl describe pods my-nginx
+kubectl get pod my-nginx --export -o yaml > my_pod_definition.yaml
+ls
+kubectl edit pod my-nginx
+kubectl describe pod my-nginx
+kubectl port-forward my-nginx 8080:80
+kubectl delete pod my-nginx --grace-period=1
+kubectl create -f pod_definition.yaml
+cd k8s/
+kubectl create -f pod_definition.yaml
+kubectl get po
+kubectl apply -f pod_definition.yaml
+kubectl get po -w
+kubectl logs my-pod
+kubectl logs my-pod -w
+kubectl exec my-pod -- ls /etc
+kubectl exec my-pod -it -- /bin/sh 
+kubectl delete po my-pod --grace-period=1
+doskey /HISTORY > history3.txt

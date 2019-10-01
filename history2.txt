@@ -1,0 +1,22 @@
+az aks install-cli
+kubectl
+az logout
+az aks get-credentials -g rg04jo -n aks04jo
+az login
+az aks get-credentials -g rg04jo -n aks04jo
+kubectl nodes 
+kubectl get nodes 
+kubectl get --help
+kubectl api-resources
+kubectl addons list
+kubectl get pods
+kubectl --all-namespaces
+kubectl get pods --all-namespaces
+kubectl get svc --all-namespaces
+kubectl get pods --all-namespaces
+kubectl get pod kube-proxy-b2l8x -n kube-system --export -o yaml pod.yaml
+kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml
+az aks browse --resource-group rg04jo --name aks04jo
+Y
+az aks browse --resource-group rg04jo --name aks04jo
+doskey /HISTORY > history2.txt

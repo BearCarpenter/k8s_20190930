@@ -1,0 +1,6 @@
+cd Desktop\workspace\k8s_20190930
+kubectl get svc --all-namespace
+kubectl get svc --all-namespaces
+az aks browse --resource-group rg04jo --name aks04jo
+Y
+doskey /HISTORY > history.txt

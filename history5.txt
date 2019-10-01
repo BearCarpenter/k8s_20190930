@@ -1,0 +1,50 @@
+az aks scale --resource-group rg04jo --name aksjo04 --node-count 2 --nodepool-name agentpool
+kubectl apply -f depl.yaml
+kubectl get pods -l run=my-nginx -o wide
+kubectl get pods -l run=my-nginx -o yaml | grep podIP
+kubectl get pods -l run=my-nginx -o yaml 
+kubectl expose deployment my-nginxo
+kubectl expose deployment my-nginx
+kubectl apply -f service.yaml
+kubectl get service my-nginx
+kubectl describe svc my-nginx
+kubectl get services kube-dns --namespace=kube-system
+kubectl run curl --image=radial/busyboxplus:curl -i --tty --rm
+kubectl edit svc my-nginx
+ kubectl get svc my-nginx -w
+kubectl delete service my-nginx
+kubectl delete deployment my-nginx
+kubectl get po
+kubectl get po -1
+kubectl get po -w
+kubectl get po
+kubectl create configmap my-config-map --from-literal=param1=value1 --from-literal=param2=value2
+kubectl get config my-config-map -o yaml
+kubectl get configmap my-config-map -o yaml
+kubectl get pod
+kubectl apply -f cm.yaml
+kubectl apply -f pod2.yaml
+kubectl logs dapi-test-pod
+kubectl apply -f pod-files.yaml
+kubectl logs dapi-test-pod
+kubectl exec dapi-test-pod -- ls /etc/config/map2
+kubectl logs dapi-test-pod
+kubectl apply -f pod-files.yaml
+kubectl apply -f pod-files.yaml -o yaml
+kubectl delete pod dapi-test-pod
+kubectl delete --all configmaps
+kubectl get po 
+kubectl apply -f statefulset.yaml
+kubectl get pods -w -l
+kubectl get pods -w -l app=nginx
+kubectl exec web-0 -- sh -c 'hostname'
+kubectl exec web-1 -- sh -c 'hostname'
+kubectl run -i --tty --image busybox:1.28 dns-test --restart=Never --rm
+kubectl get pvc -l app=nginx
+kubectl get pods 
+kubectl get pvc
+kubectl exec web-0 -- sh -c 'echo $(hostname) > /usr/share/nginx/html/index.html
+kubectl exec web-0 -- sh -c 'echo $(hostname) > /usr/share/nginx/html/index.html'
+kubectl get pvc -l app=nginx
+ kubectl delete -f statefulset.yaml
+doskey /HISTORY > history5.txt

@@ -1,0 +1,50 @@
+kubectl delete -f replica_set.yaml kubectl delete -f replica_set_node_selector.yaml
+kubectl delete -f replica_set.yaml replica_set_node_selector.yaml
+kubectl delete -f replica_set.yaml 
+kubectl delete -f replica_set_node_selector.yaml
+kubectl apply -f deployment.yaml
+kubectl get deployments deployment \ -o jsonpath --template {.spec.selector.matchLabels} 
+kubectl get deployments deployment -o jsonpath --template {.spec.selector.matchLabels} 
+kubectl get rs --selector=app=nginx
+kubectl get po
+kubectl get rs
+kubectl get rs --selector=app=nginx deployment-749bdb5d6d
+kubectl get rs --selector=app=nginx
+kubectl delete -f deployment.yaml
+kubectl get rs 
+kubectl apply -f deployment.yaml
+kubectl get rs 
+>kubectl scale replicasets deployment-749bdb5d6d --replicas=1
+>kubectl rs scale deployment-749bdb5d6d --replicas=1
+kubectl --help
+>kubectl scale replicasets deployment-749bdb5d6d --replicas=1
+kubectl get rs
+kubectl scale replicasets deployment-749bdb5d6d --replicas=1
+kubectl get rs
+kubectl get rs -w
+kubectl get po -w
+kubectl scale replicasets deployment-749bdb5d6d --replicas=3
+kubectl get po -w
+kubectl get rs -w
+kubectl scale replicasets deployment-749bdb5d6d --replicas=1
+kubectl get rs -w
+kubectl apply -f job_pi.yaml
+kubectl describe job_pi
+kubectl describe job pi
+kubectl get pods --selector=job-name=pi
+kubectl logs pi-lrdb9
+kubectl get rs
+kubectl delete -f deployment.yaml
+kubectl delete -f job_pi.yaml
+kubectl apply -f job_cron.yaml
+kubectl describe cronjobs hello
+ kubectl get cronjob hello
+ kubectl get jobs --watch
+kubectl get pods --selector=job-name=hello-1569926640
+kubectl get hello-1569926640-p5pb7
+kubectl get po hello-1569926640-p5pb7
+kubectl logs hello-1569926640-p5pb7
+git config list
+git config --list
+https://github.com/cloudstateu/k8s_20190930
+doskey /HISTORY > history4.txt

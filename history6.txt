@@ -1,0 +1,50 @@
+kubectl get pvc -l app=nginx
+kubectl delete pvc www-web-0
+kubectl delete pvc www-web-1
+kubectl delete pvc www-web-2
+kubectl delete pvc www-web-3
+kubectl apply -f depl.yaml
+kubectl get deployments
+kubectl get pods --show-labels
+kubectl port-forward nginx-deployment-76bf4969df-27s5g 8080:80
+kubectl --record deployment.apps/nginx-deployment set image deployment.v1.apps/nginx-deployment nginx=nginx:1.9.1
+kubectl rollout status deployment.v1.apps/nginx-deployment
+kubectl get rs 
+kubectl get rs -w
+kubectl port-forward nginx-deployment-76bf4969df-27s5g  8080:80
+kubectl port-forward nginx-deployment-76bf4969df-27s5g 8080:80
+kubectl get po
+kubectl port-forward nginx-deployment-779fcd779f-2zvcn 8080:80
+kubectl apply -f depl2.yaml
+kubectl get pod
+kubectl get pod -w
+kubectl rollout history deployment nginx-deployment
+kubectl port-forward nginx-deployment-779fcd779f-2zvcn 8080:80
+kubectl rollout history deployment nginx-deployment
+kubectl rollout history deployment nginx-deployment --revision=2
+kubectl rollout history deployment nginx-deployment --revision=3
+kubectl rollout undo deployments nginx-deployment
+kubectl rollout history deployment nginx-deployment --revision=3
+kubectl rollout history deployment nginx-deployment --revision=3kubectl rollout history deployment nginx-deployment 
+kubectl rollout history deployment nginx-deployment
+kubectl rollout undo deployments nginx-deployment --to-revision=3
+kubectl rollout history deployment nginx-deployment 
+kubectl delete deployment nginx-deployment
+kubectl apply -f mandatory.yaml
+kubectl apply -f cloud-generic.yaml
+ kubectl apply -f service1.yaml
+kubectl apply -f service2.yaml
+kubectl get svc
+kubectl apply -f ingress.yaml
+kubectl get svc
+kubectl get ing
+kubectl get --help
+kubectl get -A
+kubectl get -A po
+kubectl delete -f ingress.yaml
+kubectl delete -f service2.yaml
+kubectl delete -f service1.yaml
+kubectl delete -f service2.yaml
+kubectl delete -f cloud-generic.yaml
+kubectl delete -f mandatory.yaml
+doskey /HISTORY > history6.txt
