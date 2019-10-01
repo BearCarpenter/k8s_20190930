@@ -25,7 +25,7 @@ The Deployment is managind ReplicaSet. Let's see the label selector used by Depl
 
 ``
 kubectl get deployments deployment \
--o jsonpath --template {.spec.selector.matchLabels}
+-o=jsonpath='{.spec.selector.matchLabels}'
 ``
 ![img](./img/deployment1.png)
 2. The Deployment is managing a ReplicaSet with the label app=nginx. Find that ReplicaSet by running command: ``kubectl get replicasets --selector=app=nginx``
